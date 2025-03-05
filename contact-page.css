@@ -1,0 +1,22 @@
+.contact-form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 20px;
+}
+.contact-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #df9393;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.contact-me{
+    text-align: center;
+}
+.input-textbox{
+    line-height: 2em;
+}

@@ -1,0 +1,59 @@
+*{
+    font-style: italic;
+}
+
+.Project-container{
+    position: relative;
+    display: flex
+;
+    flex-wrap: wrap;
+    margin: 0 0 32px;
+}
+
+.ProjectShowcase-cover{
+    background-color: aliceblue;
+    border: solid;
+
+}
+
+.Project-description{
+    border: solid;
+    border-color: green;
+    text-align: left;
+    color: #fff;
+    display: inline-block;
+    background-color: #1e1e1e;
+    padding: 24px;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin: 8px 0;
+    width: 100%;
+    min-height: 100%;
+    line-height: 1.44;
+}
+
+.Project-info{
+    border: none;
+    text-align: left;
+    color: #fff;
+    display: inline-block;
+    background-color: #1e1e1e;
+    padding: 24px;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin: 8px 0;
+    width: 100%;
+    min-height: 100%;
+    line-height: 1.44;
+    
+}
+
+
+
+.Project-development{
+    margin: auto;
+    padding: 10px;
+    border-style: solid;
+    background-color: blueviolet;
+    
+}

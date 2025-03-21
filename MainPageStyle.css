@@ -8,6 +8,13 @@
 .center{
     text-align: center;
 }
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
 
 /* Header */
 header{
@@ -40,15 +47,41 @@ a:hover, a:active, .headerButton {
 }
 
 /* About me */
-.aboutMe{
+#aboutMe-container{
     background-color: bisque;
+    margin: 10px auto;
+    
+    border: 3px solid coral
+}
+
+.aboutMe-image{
+    border: 3px solid coral;
+    border-radius: 10px;
+    margin-right: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.aboutMe-text{
+    margin: 10;
+    padding: 10;
+    box-align: border-box;
 }
 
 
 /* Skills */
-.skills{
+.skills-container{
     background-color: aqua;
+    
+    border: 3px solid lightblue
 }
+
+.skills-icons{
+    align-content: center;
+    justify-self: center;
+    text-align: center;
+}
+
 
 .technicalSkills{
     background-color: lightcoral;

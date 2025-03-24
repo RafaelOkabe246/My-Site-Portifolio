@@ -1,20 +1,25 @@
-*{
-    font-style: italic;
+
+
+/*Image classes*/
+.image-container{
+    width: 300px; /* Largura fixa */
+    height: 300px; /* Altura fixa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 2%;
+    overflow: hidden;
 }
 
-.Project-container{
-    position: relative;
-    display: flex
-;
-    flex-wrap: wrap;
-    margin: 0 0 32px;
-}
+.image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Mantém a proporção e adiciona fundo caso necessário */
+    border-radius: 2%; /* Garante que a imagem siga o arredondamento */
+} 
 
-.ProjectShowcase-cover{
-    background-color: aliceblue;
-    border: solid;
-
-}
+/*///////*/
 
 .Project-description{
     border: solid;
@@ -30,12 +35,13 @@
     width: 100%;
     min-height: 100%;
     line-height: 1.44;
+    border-radius: 2%;
 }
 
 .Project-info{
     border: none;
     text-align: left;
-    color: #fff;
+    background-color: #1e1e1e;
     display: inline-block;
     background-color: #1e1e1e;
     padding: 24px;
@@ -45,15 +51,53 @@
     width: 100%;
     min-height: 100%;
     line-height: 1.44;
-    
+    border-radius: 2%;
+
+    color: #fff;
+}
+
+.Project-info li{
+    list-style-type: none;
+}
+
+.icon{
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    filter: 
+    invert(100%)
+    sepia(29%)
+    saturate(0%)
+    hue-rotate(12deg)
+    brightness(103%)
+    contrast(101%);
 }
 
 
-
 .Project-development{
-    margin: auto;
+    margin: 10px;
     padding: 10px;
     border-style: solid;
-    background-color: lightblue;
-    
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.project-dev-section{
+    margin-top: 5px;
+    padding: auto;
+    border-style: solid;
+}
+
+.project-dev-section-images{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta o número de colunas automaticamente */
+    gap: 10px;
+    justify-items: center;
+}
+
+.project-dev-section-images img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
 }

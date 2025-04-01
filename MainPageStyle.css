@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-columns: minmax(0, 1fr);
+    background-color: #121212;
 }
 .center{
     text-align: center;
@@ -16,11 +17,15 @@ body{
     background: black;
 }
 
+*{
+    color: white;
+}
+
 
 
 /* About me */
 #aboutMe-container{
-    background-color: bisque;
+    background-color: #121212;
     margin: 10px auto;
     
     border: 3px solid coral
@@ -43,7 +48,7 @@ body{
 
 /* Skills */
 .skills-container{
-    background-color: aqua;
+    background-color: #121212;
     
     border: 3px solid lightblue
 }
@@ -56,7 +61,7 @@ body{
 
 
 .technicalSkills{
-    background-color: lightcoral;
+    background-color: #1e1e1e;
     outline-style: solid;
     margin: 2px;
     border-radius: 20px;
@@ -68,5 +73,8 @@ body{
 
 /* Projects */
 .projects{
-    background-color: aqua;
+    background-color: #1e1e1e;
+    max-width: 500px;
+    justify-self: center;
+    /*background-color: #1e1e1e;*/
 }

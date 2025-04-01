@@ -15,7 +15,7 @@ class SpacialFooter extends HTMLElement {
 function loadHeader() {
     const headerElement = document.getElementById('header-placeholder');
 
-    fetch('header.html')  // Path to your header file
+    fetch('\header.html')  // Path to your header file
         .then(response => response.text())
         .then(data => {
             headerElement.innerHTML = data;

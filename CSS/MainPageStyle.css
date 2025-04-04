@@ -26,11 +26,15 @@ body{
 
 
 /* About me */
-#aboutMe-container{
+.aboutMe-container{
     margin: 10px auto;
     
-    border: 3px solid coral
+    border: 3px solid coral;
+
+
+    transition: transform 0.5s;
 }
+
 
 .aboutMe-image{
     border: 3px solid coral;

@@ -1,6 +1,6 @@
 /* Header */
-header{
-    background-color: lightblue;
+.header{
+
 }
 
 
@@ -11,12 +11,14 @@ header{
     max-width: 800px;
     border: 1px solid black;
     border-style: none;
+
+    justify-content: right;
 }
 
 li {display: inline;}
 
 a:link, a:visited, .headerButton {
-    background-color: lightseagreen;
+    background-color: #121212;
     color: white;
     padding: 14px 25px; margin: 3px;
     text-align: center;

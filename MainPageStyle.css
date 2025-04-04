@@ -2,9 +2,11 @@
 .site-main-page{
     min-height: 100dvh;
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-columns: minmax(0, 1fr);
-    background-color: #121212;
+   /* grid-template-columns: auto 1fr auto;
+    grid-template-columns: minmax(0, 1fr);*/
+    background-color: #1e1e1e;
+    padding-right: 20%;
+    padding-left: 20%;
 }
 .center{
     text-align: center;
@@ -25,7 +27,6 @@ body{
 
 /* About me */
 #aboutMe-container{
-    background-color: #121212;
     margin: 10px auto;
     
     border: 3px solid coral
@@ -33,7 +34,7 @@ body{
 
 .aboutMe-image{
     border: 3px solid coral;
-    border-radius: 10px;
+    border-radius: 150px;
     margin-right: 15px;
     padding: 10px;
     margin-bottom: 20px;
@@ -48,26 +49,28 @@ body{
 
 /* Skills */
 .skills-container{
-    background-color: #121212;
-    
     border: 3px solid lightblue
 }
 
 .skills-icons{
     align-content: center;
-    justify-self: center;
-    text-align: center;
+    justify-self: left;
+    text-align: left;
 }
 
 
 .technicalSkills{
-    background-color: #1e1e1e;
     outline-style: solid;
-    margin: 2px;
-    border-radius: 20px;
-    padding: 4px;
-
+    margin: 5px;
+    border-radius: 4px;
+    padding: 8px;
     display: inline-flex;
+
+    transition: transform 0.5s;
+}
+
+.technicalSkills:hover{
+    transform: scale(1.1);
 }
 
 
@@ -77,4 +80,15 @@ body{
     max-width: 500px;
     justify-self: center;
     /*background-color: #1e1e1e;*/
+}
+
+
+/*Footer*/
+.footer-container{
+
+}
+
+.icon{
+    filter: invert(100%) brightness(1000%);
+    width: 30px;
 }

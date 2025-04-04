@@ -1,0 +1,17 @@
+.projects-content{
+    background-color: #1e1e1e;
+    display: flex
+;
+    flex-wrap: wrap;
+}
+
+.Project-Slot{
+    border: solid orange;
+    background-color: #232323;
+    color: aliceblue;
+}
+
+.project-cover{
+    display: block;
+    position: relative;
+}

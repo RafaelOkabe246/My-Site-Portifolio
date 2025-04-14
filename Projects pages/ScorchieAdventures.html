@@ -74,15 +74,9 @@
         </div>
 
         <section class="Project-development">
-            <div class="project-dev-section">
-                <h4>Introduction</h4>
-                <p>
-                    Introduction description
-                </p>
-            </div>
 
             <div class="project-dev-section">
-                <h4><a href="#">CODE github - specific function</a></h4>
+                <h4>Interactive objects</h4>
 
                 <div class="project-dev-section-images">
                     <img src="\Assets\Images\Projects\Scorchie Adventures\InteractiveObjects\InteractiveInterface.png"
@@ -95,18 +89,73 @@
                         alt="Trigger Object">
                 </div>
 
-                <h4>Some specific function</h4>
-                <p>
-                    Introduction description
+                <p>      
+                        All the objects inherit from the parent class 
+                        'interactive object', there are two types: 
+                        obstacle and trigger object. the obstacle type 
+                        reacts to the player and the enviromment, while
+                         the trigger, activate events that can change
+                          the game, level layout or other objects.
                 </p>
             </div>
 
+            <div class="project-dev-section">
+                <h4>Enemies and shaders</h4>
+
+                <div class="container pt-3">
+                    <!-- Carousel -->
+                    <div id="area" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true">
+    
+                        <!-- Indicators/dots -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#area" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#area" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#area" data-bs-slide-to="2"></button>
+                        </div>
+    
+                        <!-- The slideshow/carousel -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="\Assets\Images\Projects\Scorchie Adventures\Gimmicks-image.png"
+                                    class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="\Assets\Images\Projects\Scorchie Adventures\Gimmicks-2-image.png"
+                                    class="d-block w-100">
+    
+                            </div>
+                            <div class="carousel-item">
+                                <img src="\Assets\Images\Projects\Scorchie Adventures\inimigos-image.png"
+                                    class="d-block w-100">
+                            </div>
+                        </div>
+    
+                        <!-- Left and right control/icons -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#area" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+    
+                        <button class="carousel-control-next" type="button" data-bs-target="#area" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+
+                        <!--
+                        <video width="320" height="240" controls>
+                            <source src="movie.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                          </video>-->
+
+    
+                    </div>
+                </div>
+            </div>
+            <!--
             <div class="project-dev-section">
                 <h4>What I learned?</h4>
                 <p>
                     Introduction description
                 </p>
-            </div>
+            </div>-->
         </section>
 
     </div>

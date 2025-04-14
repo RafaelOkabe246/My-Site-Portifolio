@@ -42,17 +42,16 @@
 
         <div class="row">
             <div class="image-container">
-                <img src="\Assets\Images\Projects\Scorchie Adventures\ScorchieAdventures-Cape.png" width="90%">
+                <img src="\Assets\Images\Projects\Rage On The Machine\main-menu.png" width="90%">
             </div>
             <div class="col-6">
                 <section class="Project-description">
                     <h4>About the game</h4>
                     <p>
-                        Help Scorchie, a friendly and hiperactive will-o'-wisp, to save his friends agains a mysterious
-                        and perverse sludge
-                        while venturing out into a vast and diverse world in this tight platformer game!
-                        Brave dozens of challenges, uncover secrets and piece together the mistery of the purple
-                        sludge using Scorchie's dash abilities!
+                        A fighting game with grid based movement and beat 
+                        'em up elements in which you play as a simple salary worker. 
+                        After being fired and replace by a robot,
+                         she is about to release her 'rage on the machines'.
                     </p>
                 </section>
             </div>
@@ -74,39 +73,58 @@
         </div>
 
         <section class="Project-development">
+
             <div class="project-dev-section">
-                <h4>Introduction</h4>
+                <h4>Grid Movement System</h4>
                 <p>
-                    Introduction description
+                    The grid is instantiate by the 'Level generator script', 
+                    then it starts the coroutine 'Generate' to create the grid.
                 </p>
+                <h4>Progression System</h4>
+                <p>
+                    Each level has a number of stages, the stages informs what enemies, gimmicks and items can appear. The chance of a certain object to spawn is based on the quantity of that object in a list. 
+                </p>
+                <h5>Scripts:</h5>
+                <div class="project-dev-section-images">
+                    <img src="\Assets\Images\Projects\Rage On The Machine\grid-generate-script.png"
+                        alt="grid-generate-script">
+                    <img src="\Assets\Images\Projects\Rage On The Machine\calculate-tile.png"
+                        alt="calculate-tile">
+                    <img src="\Assets\Images\Projects\Rage On The Machine\calculate-tile-2.png"
+                        alt="calculate-tile>
+                    <img src="\Assets\Images\Projects\Rage On The Machine\grid-script.png"
+                        alt="grid-script">
+                    <img src="\Assets\Images\Projects\Rage On The Machine\tile-script.png"
+                        alt="tile-script">
+                </div>
             </div>
 
             <div class="project-dev-section">
-                <h4><a href="#">CODE github - specific function</a></h4>
+                <h4>Behaviour Tree</h4>
+                <p>
+                    Behaviour tree is a node based structure iused in computer science, robotics, control systems and video games. It provides a hierarchical way to model and control the behavior of agents or entities in a system. it's not necessary to know how the tasks are implemented and is scalable in the long run. it's A more modular and flexible aproach than the hierarchical state machines.
+                    A behavior tree is graphically represented as a directed tree in which the nodes are classified as root, control flow nodes, or execution nodes (tasks). For each pair of connected nodes the outgoing node is called parent and the incoming node is called child. The root has no parents and exactly one child, the control flow nodes have one parent and at least one child, and the execution nodes have one parent and no children. Graphically, the children of a control flow node are placed below it, ordered from left to right.<br>
+                    <br>
+
+                    A behavior tree is graphically represented as a directed tree in which the nodes are classified as root, control flow nodes, or execution nodes (tasks). For each pair of connected nodes the outgoing node is called parent and the incoming node is called child. The root has no parents and exactly one child, the control flow nodes have one parent and at least one child, and the execution nodes have one parent and no children. Graphically, the children of a control flow node are placed below it, ordered from left to right.
+                </p>
+
+                <h5>Scripts:</h5>
 
                 <div class="project-dev-section-images">
-                    <img src="\Assets\Images\Projects\Scorchie Adventures\InteractiveObjects\InteractiveInterface.png"
+                    <img src="\Assets\Images\Projects\Rage On The Machine\node-behaviourTree.png"
                         alt="Interface">
-                    <img src="\Assets\Images\Projects\Scorchie Adventures\InteractiveObjects\InteractiveObjectClass.png"
+                    <img src="\Assets\Images\Projects\Rage On The Machine\selector-node.png"
                         alt="Interactive Object class">
-                    <img src="\Assets\Images\Projects\Scorchie Adventures\InteractiveObjects\ObstacleClass.png"
+                    <img src="\Assets\Images\Projects\Rage On The Machine\sequence-node.png"
                         alt="Obstacle class">
-                    <img src="\Assets\Images\Projects\Scorchie Adventures\InteractiveObjects\TriggerObject.png"
+                    <img src="\Assets\Images\Projects\Rage On The Machine\tree-node.png"
                         alt="Trigger Object">
                 </div>
 
-                <h4>Some specific function</h4>
-                <p>
-                    Introduction description
-                </p>
+                <img src="\Assets\Images\Projects\Rage On The Machine\behaviour-tree.png" style="width: 80%;">
             </div>
 
-            <div class="project-dev-section">
-                <h4>What I learned?</h4>
-                <p>
-                    Introduction description
-                </p>
-            </div>
         </section>
 
     </div>

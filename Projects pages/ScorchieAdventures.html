@@ -16,7 +16,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-        <link rel="stylesheet" href="../CSS/header-style.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/header-style.css" type="text/css">
 
 </head>
 
@@ -37,7 +37,7 @@
             </nav>
         </div>
     </div>
-    
+
     <div class="project-page">
 
         <div class="row">
@@ -64,7 +64,8 @@
                             Audio Programmer, Ai Progremmer, Level Designer</li>
                         <li><img src="../Assets\Images\Projects\Project-info-icons\team-size-icon.png" class="icon">Team
                             size: 5</li>
-                        <li><img src="../Assets\Images\Projects\Project-info-icons\time-icon.png" class="icon">Time frame:
+                        <li><img src="../Assets\Images\Projects\Project-info-icons\time-icon.png" class="icon">Time
+                            frame:
                             5 months (first version)</li>
                         <li><img src="../Assets\Images\Projects\Project-info-icons\engine-icon.png" class="icon">Engine:
                             Unity (C#)</li>
@@ -89,60 +90,158 @@
                         alt="Trigger Object">
                 </div>
 
-                <p>      
-                        All the objects inherit from the parent class 
-                        'interactive object', there are two types: 
-                        obstacle and trigger object. the obstacle type 
-                        reacts to the player and the enviromment, while
-                         the trigger, activate events that can change
-                          the game, level layout or other objects.
+                <p>
+                    All the objects inherit from the parent class
+                    'interactive object', there are two types:
+                    obstacle and trigger object. the obstacle type
+                    reacts to the player and the enviromment, while
+                    the trigger, activate events that can change
+                    the game, level layout or other objects.
                 </p>
             </div>
 
             <div class="project-dev-section">
-                <h4>Enemies and shaders</h4>
-
-                <div class="container pt-3">
-                    <!-- Carousel -->
-                    <div id="area" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true">
-    
-                        <!-- Indicators/dots -->
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#area" data-bs-slide-to="0" class="active"></button>
-                            <button type="button" data-bs-target="#area" data-bs-slide-to="1"></button>
-                            <button type="button" data-bs-target="#area" data-bs-slide-to="2"></button>
-                        </div>
-    
-                        <!-- The slideshow/carousel -->
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="../Assets\Images\Projects\Scorchie Adventures\Gimmicks-image.png"
-                                    class="d-block w-100">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="../Assets\Images\Projects\Scorchie Adventures\Gimmicks-2-image.png"
-                                    class="d-block w-100">
-    
-                            </div>
-                            <div class="carousel-item">
-                                <img src="../Assets\Images\Projects\Scorchie Adventures\inimigos-image.png"
-                                    class="d-block w-100">
-                            </div>
-                        </div>
-    
-                        <!-- Left and right control/icons -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#area" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </button>
-    
-                        <button class="carousel-control-next" type="button" data-bs-target="#area" data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </button>
-
-                    </div>
+                <h4>Enemies </h4>
+                <div class="project-dev-section-images">
+                    <img src="../Assets\TestGif.gif" alt="Patrol">
+                    <img src="../Assets\TestGif.gif" alt="Flyier">
+                    <img src="../Assets\TestGif.gif" alt="Static">
                 </div>
             </div>
+
+            <div class="project-dev-section">
+                <h4>Shaders </h4>
+                <h5>Fire shader</h5>
+                <div class="project-dev-section-images">
+                    <img src="../Assets\Images\Projects\Scorchie Adventures\Shaders\FireShader1.png" alt="Fire Shader">
+                    <img src="../Assets\Images\Projects\Scorchie Adventures\Shaders\FireShader2.png" alt="Fire Shader">
+                </div>
+
+                <p>
+                    How it works?<br>
+                    The shader is a sprite lit shader made in the Shader Graph Editor. Is is divided in two different
+                    effects: dissolve and glowing border.
+                </p>
+
+
+                <h6>Dissolve effect:</h6>
+                <ol>
+                    <li>Get the mesh vertex</li>
+                    <li>Add a simple noise to create a random fire feeling</li>
+                    <li>A step node with a normalized float paremeter controls the dissolve progress</li>
+                    <li>Then multiply with the alpha value of the texture and apply the output in the alpha node on the
+                        Fragment</li>
+                </ol>
+
+                <h6>Glowing border effect:</h6>
+                <ol>
+                    <li>By subtracting by a tiny amount the offset, the border creates a line along the dissolve effect
+                    </li>
+                    <li>Add a step node and connects with the same Simple Noise node of the dissolve effect</li>
+                    <li>Subtract both Step Nodes</li>
+                    <li>Multiply the Dissolve effect output with the Glowing Border effect</li>
+                    <li>Multiply by a color parameter</li>
+                    <li>Add the output to the RGBA value of the sample texture, then conects to the base color</li>
+                </ol>
+                <br>
+
+                <hr>
+                <h5>Water shader</h5>
+                <div class="project-dev-section-images">
+                    <img src="../Assets\Images\Projects\Scorchie Adventures\Shaders\WaterShader1.png"
+                        alt="Noise creation">
+                    <img src="../Assets\Images\Projects\Scorchie Adventures\Shaders\WaterShader2.png" alt="Output">
+                    <img src="../Assets\Images\Projects\Scorchie Adventures\Shaders\WaterEffectExample.png"
+                        alt="Output">
+                </div>
+                <p>
+                    How it works?<br>
+                    The shader is an unlit shader made in the Shader graph editor. It utilizes a camera to capture the
+                    movement and then shows a reflection on a texture. To create the wave effect, it is used one script
+                    for the Water waves and another to create an instance of the material used by the camera.
+                </p>
+
+                <h6>Water:</h6>
+                <ol>
+                    <li>Create a noise generation using a Time and Gradient Noise nodes</li>
+                    <li>The noise output is passed into a Remap node, mapping the values from [0, 1] to [-0.002, 0.002].
+                        This gives a subtle distortion.
+                    <li>The remapped value is then multiplied with a Vector2 (X = 1, Y = 1) to allow direction-based
+                        scaling.</li>
+                    <li>Apply the distorted UVs on the Sample Texture 2D node</li>
+                    <li>The color is defined by a variable "Color"</li>
+                </ol>
             
+
+                <h6>Water wave movement scripts:</h6>
+                <div class="project-dev-section-images">
+                    <img src="../Assets\Images\Projects\Scorchie Adventures\Shaders\WaterScript.png"
+                        alt="Noise creation">
+                    <img src="../Assets\Images\Projects\Scorchie Adventures\Shaders\WaterShader2.png" alt="Output">
+                    <img src="../Assets\Images\Projects\Scorchie Adventures\Shaders\WaterEffectExample.png"
+                        alt="Output">
+                </div>
+                <p>
+                <ol>
+                    <li> Mesh Generation
+                        <ul>
+                            <li>A 2D water mesh is built from vertical strips, each with two vertices (top and bottom).
+                            </li>
+
+                            <li>The number of vertical strips = numSprings.</li>
+
+                            <li>Triangles and UVs are generated to form a water surface plane.</li>
+                        </ul>
+                    </li>
+                    <li>Spring System
+                        <ul>
+                            <li>Each strip is controlled by a Spring instance that stores:</li>
+
+                            <li>weightPosition: vertical displacement (wave height)</li>
+
+                            <li>velocity and acceleration: for physics simulation</li>
+
+                            <li>sineOffset: for continuous sinusoidal waves</li>
+
+                            <li>Springs are updated every frame based on:</li>
+
+                            <li>Hooke's Law: F = -k * x (spring force)</li>
+
+                            <li>Damping: to smoothen movement</li>
+
+                            <li>Neighbor propagation: waves influence nearby springs</li>
+
+                            <li>Sine wave (if enabled) adds regular oscillations across the surface.</li>
+
+                        </ul>
+                    </li>
+
+                    <li>Mesh Update
+                        <ul>
+                            <li>The top vertex of each strip is moved vertically based on the spring’s weightPosition
+                                and
+                                sineOffset.</li>
+                            <li> The mesh is updated and recalculated each frame to reflect these vertex changes.
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>Interactive Ripples
+                        <ul>
+                            <li> When objects with Rigidbody2D enter or exit the water (OnTriggerEnter2D / Exit2D), the
+                                nearest
+                                spring is displaced up or down (via Ripple()).</li>
+
+                            <li>This creates a local splash that propagates over time.</li>
+
+                            <li>An optional splashParticle is instantiated at the contact point.</li>
+                        </ul>
+
+                    </li>
+                </ol>
+                </p>
+            </div>
+
         </section>
 
     </div>

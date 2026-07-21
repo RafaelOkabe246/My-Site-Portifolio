@@ -1,0 +1,201 @@
+Game Developer Portfolio – Technical Documentation
+Version: 1.0
+Author: AI Assistant
+Tech Stack: HTML5, CSS3 (vanilla), JavaScript (vanilla), Canvas API
+
+1. Overview
+This project is a fully self-contained, responsive portfolio website designed specifically for a game programmer and developer. It features a dynamic main page (hero), a project showcase grid, and a functional contact section. The design emphasizes a futuristic, "cyberpunk/gaming" aesthetic with dark themes, neon gradients, particle effects, and smooth micro-interactions.
+
+Key Features:
+
+Single-file architecture (everything is in index.html).
+
+Fully responsive (mobile-first via CSS Grid/Flexbox).
+
+Custom animated particle background.
+
+Dynamic navigation bar (scroll effects + mobile hamburger menu).
+
+Interactive project cards with hover states.
+
+Front-end contact form with simulated submission feedback.
+
+2. File Structure
+Since the application is contained within a single HTML file, the structure is logical rather than physical:
+
+text
+index.html
+├── <head>
+│   ├── Meta tags & Title
+│   ├── Google Fonts (Orbitron, Inter)
+│   ├── Font Awesome 6 (Icons)
+│   └── <style> (All CSS)
+├── <body>
+│   ├── <canvas> (Particle background)
+│   ├── <nav> (Navigation)
+│   ├── <section id="home"> (Hero/Main Page)
+│   ├── <section id="projects"> (Projects Grid)
+│   ├── <section id="contact"> (Contact Info & Form)
+│   ├── <footer>
+│   └── <script> (All JavaScript)
+└── (End)
+3. Dependencies & External Resources
+Resource	Purpose	Version/Link
+Google Fonts	Typography (Headlines & Body)	Orbitron (display), Inter (sans-serif)
+Font Awesome	Icon library (social media, UI icons)	v6.0.0-beta3 (CDN)
+Canvas API	Particle rendering	Native browser API (no external library)
+No other external JavaScript libraries (like jQuery or React) are required.
+
+4. HTML Structure Breakdown
+4.1. Navigation (.navbar)
+Fixed positioned with backdrop-filter: blur() for a glass-morphism effect.
+
+Contains the logo and a list of links (Home, Projects, Contact, Hire Me).
+
+The "Hire Me" link uses a special .nav-cta class for a gradient button effect.
+
+Includes a .hamburger button (visible on mobile) to toggle the side menu.
+
+4.2. Main Page / Hero (#home)
+Structured as a two-column grid (.hero-grid).
+
+Left Column: Headline (with animated gradient text), tagline, experience badges (Years, Games, Awards), and call-to-action (CTA) buttons.
+
+Right Column: Circular avatar wrapper (.hero-avatar) with a floating animation. Inside is a placeholder icon (fa-user-astronaut). Surrounding it are floating decorative icons (.floating-icons).
+
+4.3. Projects Section (#projects)
+A grid layout (.projects-grid) with grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) to handle responsiveness.
+
+Each project is a card (.project-card) containing:
+
+A visual thumb area (.project-thumb) – currently using a solid color background and an icon, but ready for image backgrounds.
+
+A body with category, title, description, tech tags (.project-tags), and action links (Code/Demo).
+
+4.4. Contact Section (#contact)
+Two-column layout (.contact-grid).
+
+Left Column: Email, location, availability, and social media links.
+
+Right Column: A functional HTML form with fields for Name, Email, Subject, and Message. The form uses required attributes for basic validation.
+
+4.5. Footer
+Simple centered text with a copyright notice and a heart icon.
+
+5. CSS Architecture
+5.1. Custom Properties (Root Variables)
+The styling is highly customizable via CSS variables defined in :root:
+
+css
+--bg-primary: #0a0a0f;
+--bg-secondary: #12121a;
+--bg-card: #1a1a2e;
+--text-primary: #e8e8f0;
+--text-secondary: #a0a0b8;
+--accent-1: #7b2ffc;      /* Purple */
+--accent-2: #00d4ff;      /* Cyan */
+--accent-3: #ff6bcd;      /* Pink */
+--radius: 16px;
+--transition: 0.4s cubic-bezier(...);
+Changing these variables globally alters the entire theme instantly.
+
+5.2. Layout Methods
+Grid: Used for the hero section, projects grid, and contact layout.
+
+Flexbox: Used for navigation, badges, button groups, and project tags.
+
+5.3. Key Animations
+@keyframes gradientShift: Moves the background position of the gradient text to create a flowing neon effect.
+
+@keyframes float: Makes the avatar and icons float up and down smoothly.
+
+@keyframes floatIcon: Similar to float but includes a slight rotation.
+
+5.4. Responsive Breakpoints
+1024px: Hero switches to single-column (text above avatar). Contact switches to single-column.
+
+768px: Mobile menu activates (hamburger replaces nav links). Font sizes scale down.
+
+480px: Buttons become full-width for better touch interaction.
+
+6. JavaScript Functionality
+The code is self-contained in a single <script> block at the bottom of the body.
+
+6.1. Particle System (Canvas)
+Initialization: Renders 80 particles on a full-screen canvas positioned behind the content (z-index: 0).
+
+Logic: Particles move randomly. When the distance between two particles is less than 120px, a semi-transparent purple line is drawn between them.
+
+Resize Handling: The canvas resizes dynamically when the browser window changes.
+
+6.2. Navigation & UI Interactions
+Scroll Effect: Adds a .scrolled class to the navbar when the user scrolls past 40px, increasing the background opacity and shadow.
+
+Hamburger Menu: Toggles the .open class on the nav links and .active on the hamburger icon to animate the bars into an "X". It also closes the menu when a link is clicked.
+
+6.3. Contact Form
+Behavior: Prevents the default POST request.
+
+Simulation: Shows a loading spinner (fa-spinner), simulates a 1.5s network delay, then displays a "Message Sent!" success state with a green gradient before resetting the form to its original state.
+
+Note: This is a front-end simulation. To actually send emails, you must integrate a backend API (e.g., Formspree, EmailJS, Netlify Forms).
+
+6.4. Smooth Scrolling
+Adds a fallback scrollIntoView({ behavior: 'smooth' }) for anchor links (#), ensuring smooth navigation across all modern browsers.
+
+7. Customization Guide
+7.1. Changing the Avatar
+Locate this block in the HTML:
+
+html
+<div class="hero-avatar-inner">
+    <!-- Replace the <i> tag with an <img> tag -->
+    <img src="your-photo.jpg" alt="Alex Rivera" />
+</div>
+Make sure to set width: 100%; height: 100%; object-fit: cover; (already applied in the CSS).
+
+7.2. Adding/Editing Projects
+Duplicate the .project-card div inside the .projects-grid. Update the following fields:
+
+h3: Project Title.
+
+.project-category: E.g., "Action RPG".
+
+p: Project description.
+
+.project-tags span: Technologies used.
+
+.project-links a: Href attributes for GitHub and Demo links.
+
+7.3. Editing Social Media Links
+Find the .social-links div in the contact section. Replace the href="#" with your actual profile URLs (GitHub, LinkedIn, etc.).
+
+7.4. Updating Contact Details
+Modify the .contact-details items:
+
+Replace alex@rivergames.dev with your email.
+
+Change the location and timezone text accordingly.
+
+7.5. Enabling the Contact Form (Backend)
+The form currently simulates a send. To make it work:
+
+Replace the action attribute on the <form> tag with your backend endpoint, or
+
+Integrate a third-party service like Formspree by setting action="https://formspree.io/f/your-id" and method="POST". You can then remove or override the JavaScript simulation.
+
+8. Performance & Compatibility
+Performance: The canvas particle system is lightweight. DOM manipulation is kept minimal to avoid layout thrashing.
+
+Compatibility: The code uses widely supported features (backdrop-filter, grid, flexbox, canvas). The site works on Chrome, Firefox, Safari, and Edge.
+
+Fallbacks: The text-shadow and solid color backgrounds provide fallbacks for browsers that do not support -webkit-background-clip: text.
+
+9. Future Development Suggestions
+Dynamic Data: Fetch project data from a JSON file or CMS to make updates easier.
+
+Actual Form Handling: Connect the contact form to a serverless function (e.g., AWS Lambda, Vercel Functions) or an API.
+
+Accessibility (a11y): Add aria-label attributes to interactive elements and ensure color contrast meets WCAG standards.
+
+Dark/Light Mode: Toggle the CSS variables via JavaScript to add a light theme variant.

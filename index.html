@@ -1,197 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafael Okabe Portifolio</title>
-    <link rel="stylesheet" href="CSS\MainPageStyle.css" type="text/css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rafael Okabe · Game Developer</title>
 
-    <script src="..\Scripts\HeaderFooterManager.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="CSS\header-style.css" type="text/css">
+    <!--Style-->
+    <link rel="stylesheet" href="./style.css">
 
 </head>
-<!--
-Sites referencias:
-https://abubakrmo.com/ -- general dev
-https://bruno-simon.com/ -- game
-https://tomaswallin.se/#/ -- simple to learn html
-https://www.iamdeantate.com -- very simple game portifolio
--->
-
-
-
-<!--
-Seções
-1. Header
-Home
-Sobre eu
-Contato
-Projetos
-
-2. Quem sou eu?
-Interesses
-Hobbies
-Personalidade
-Minha história
-
-
-3. Habilidades 
-Soft skills
-Hard skills
-Education
-
-4. Projetos
-projects
-Experiences
-
-5. Footer
-
--->
-
 <body>
-    <div class="site-main-page">
 
-        <!-- #region Header-->
-        <div class="header-container">
-            <div>
-                <h1>Rafael Okabe</h1>
-            </div>
-            <div class="header">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">More about me</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
+    <!-- ===== PARTICLES CANVAS ===== -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="logo">ALEX<span>.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO / MAIN PAGE ===== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Left: Content -->
+                <div class="hero-content">
+                    <p class="subtitle">👾 Game Developer &amp; Programmer</p>
+                    <h1>
+                        I'm <span class="highlight">Alex Rivera</span>
+                    </h1>
+                    <p class="tagline">
+                        Crafting immersive worlds and polished gameplay experiences.
+                        Unity · Unreal · C# · C++ — I turn ideas into playable reality.
+                    </p>
+
+                    <div class="hero-badges">
+                        <span>🎮 6+ Years</span>
+                        <span>⚡ 12+ Games</span>
+                        <span>🏆 3 Awards</span>
+                        <span>🌍 Remote</span>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn-primary">
+                            <i class="fas fa-rocket"></i> View Projects
+                        </a>
+                        <a href="#contact" class="btn-secondary">
+                            <i class="fas fa-paper-plane"></i> Contact
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Avatar -->
+                <div class="hero-visual">
+                    <div class="hero-avatar">
+                        <div class="hero-avatar-inner">
+                            <!-- Replace src with your own image or keep as icon -->
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                    </div>
+                    <div class="floating-icons">
+                        <i class="fas fa-code"></i>
+                        <i class="fas fa-gamepad"></i>
+                        <i class="fas fa-cube"></i>
+                        <i class="fas fa-robot"></i>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- #endregion -->
+    </section>
 
-        <!-- #region About me-->
-
-        <section class="container aboutMe-container">
-            <div>
-                <h2>About me</h2>
+    <!-- ===== PROJECTS ===== -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>⚡ <span class="highlight">Projects</span></h2>
+                <p>Games and tools I've built — from jam prototypes to full releases.</p>
+                <div class="section-divider"></div>
             </div>
 
-            <div class="d-flex align-items-center" class="aboutMe-text">
-                <p>
-                    Hello! My name is Rafael Okabe, I'm a game programmer, writer in my spare time and passionate to
-                    learn
-                    new
-                    things. I started developing my first games when I was 12 years old on the Scratch platform.
-                    And since then my passion for game development has only grown. In 2019, I started studying the
-                    programming
-                    language C# and in the following year I participated in my first Game Jam, in which I made my first
-                    game
-                    in
-                    Unity.
-                    I am currently studying Game Development at Senac.
-                </p>
-                <div>
-                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQHW_uHG3CsFsQ/profile-displayphoto-shrink_200_200/B4DZTEL08YHYAc-/0/1738458222984?e=2147483647&v=beta&t=uEepy0UDl_DvNvXlp1GtRcW4F0Pmk0B_CC4yQtkP1n8"
-                        class="aboutMe-image" style="margin-right: 20px;">
-                </div>
-            </div>
-        </section>
-        <hr>
+            <div class="projects-grid">
 
-        <!-- #endregion -->
-
-        <!-- #region Skills-->
-        <section class="skills-container">
-
-            <h2>Skills</h2>
-
-            <div class="skills-icons">
-                <h3>Technical Experience</h3>
-
-                <ul>
-                    <li class="technicalSkills">Unity</li>
-                    <li class="technicalSkills">Unreal Engine</li>
-                    <li class="technicalSkills">C#</li>
-                    <li class="technicalSkills">JavaScript</li>
-                    <li class="technicalSkills">C++</li>
-                </ul>
-
-            </div>
-
-        </section>
-        <hr>
-
-        <!-- #endregion -->
-
-        <!-- Carrousel
-        <section class="projects">
-            <h2>Projects</h2>
-
-            <div class="container pt-3">
-                <div id="area" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true">
-
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#area" data-bs-slide-to="0" class="active"></button>
-                        <button type="button" data-bs-target="#area" data-bs-slide-to="1"></button>
-                        <button type="button" data-bs-target="#area" data-bs-slide-to="2"></button>
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-thumb" style="background: #0f0f1a;">
+                        <i class="fas fa-ghost" style="opacity:0.3;"></i>
+                        <div class="overlay"><i class="fas fa-play-circle"></i></div>
                     </div>
-
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="Assets\Images\Projects\Scorchie Adventures\ScorchieAdventures-Cape.png"
-                                class="d-block w-100">
+                    <div class="project-body">
+                        <span class="project-category">🎮 Action RPG</span>
+                        <h3>Echoes of the Void</h3>
+                        <p>
+                            A dark fantasy ARPG with real-time combat, procedural dungeons,
+                            and a deep skill tree. Built with Unity &amp; C#.
+                        </p>
+                        <div class="project-tags">
+                            <span>Unity</span><span>C#</span><span>Procedural</span>
                         </div>
-                        <div class="carousel-item">
-                            <img src="Assets\Images\Projects\Scorchie Adventures\ScorchieAdventures-Cape.png"
-                                class="d-block w-100">
-
-                        </div>
-                        <div class="carousel-item">
-                            <img src="Assets\Images\Projects\Scorchie Adventures\ScorchieAdventures-Cape.png"
-                                class="d-block w-100">
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Code</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
                         </div>
                     </div>
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#area" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
-
-                    <button class="carousel-control-next" type="button" data-bs-target="#area" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
-
                 </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-thumb" style="background: #0f0f1a;">
+                        <i class="fas fa-car" style="opacity:0.3;"></i>
+                        <div class="overlay"><i class="fas fa-play-circle"></i></div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">🏎️ Racing</span>
+                        <h3>Neon Drift</h3>
+                        <p>
+                            High-speed cyberpunk racing with dynamic weather, drifting
+                            mechanics, and online leaderboards. Unreal Engine 5 &amp; C++.
+                        </p>
+                        <div class="project-tags">
+                            <span>Unreal</span><span>C++</span><span>Multiplayer</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Code</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-thumb" style="background: #0f0f1a;">
+                        <i class="fas fa-puzzle-piece" style="opacity:0.3;"></i>
+                        <div class="overlay"><i class="fas fa-play-circle"></i></div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">🧩 Puzzle</span>
+                        <h3>Chronos Shift</h3>
+                        <p>
+                            Time-bending puzzle game where you manipulate past and present
+                            to solve intricate levels. Made with Godot &amp; GDScript.
+                        </p>
+                        <div class="project-tags">
+                            <span>Godot</span><span>GDScript</span><span>Puzzle</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Code</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-thumb" style="background: #0f0f1a;">
+                        <i class="fas fa-cubes" style="opacity:0.3;"></i>
+                        <div class="overlay"><i class="fas fa-play-circle"></i></div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">🏗️ Tool</span>
+                        <h3>VoxelForge</h3>
+                        <p>
+                            A voxel-based world editor for indie devs — export to Unity,
+                            Unreal, or custom engines. Open-source &amp; extensible.
+                        </p>
+                        <div class="project-tags">
+                            <span>Python</span><span>OpenGL</span><span>Tool</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Code</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Docs</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-thumb" style="background: #0f0f1a;">
+                        <i class="fas fa-skull" style="opacity:0.3;"></i>
+                        <div class="overlay"><i class="fas fa-play-circle"></i></div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">☠️ Survival</span>
+                        <h3>Frostbound</h3>
+                        <p>
+                            Open-world survival in a frozen wasteland. Crafting, base-building,
+                            and dynamic AI factions. Unreal Engine 5.
+                        </p>
+                        <div class="project-tags">
+                            <span>Unreal</span><span>C++</span><span>AI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Code</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-thumb" style="background: #0f0f1a;">
+                        <i class="fas fa-dice-d6" style="opacity:0.3;"></i>
+                        <div class="overlay"><i class="fas fa-play-circle"></i></div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">🎲 Board Game</span>
+                        <h3>Dungeon Dice</h3>
+                        <p>
+                            Digital board game with procedural tile generation, online
+                            multiplayer, and a unique dice-combat system. Unity.
+                        </p>
+                        <div class="project-tags">
+                            <span>Unity</span><span>C#</span><span>Multiplayer</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Code</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </section>
-        <hr>
- -->
+        </div>
+    </section>
 
-
-        <!-- #region Footer-->
-        <footer class="footer-container">
-            <div style="justify-self: right; padding-right: 5%;">
-                <a href="https://www.linkedin.com/in/rafael-okabe-6320231b5/"><img src="./Assets\Icons\linkedin.png"
-                        class="icon"></a>
+    <!-- ===== CONTACT ===== -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>📬 <span class="highlight">Contact</span></h2>
+                <p>Have a project in mind? Let's bring it to life.</p>
+                <div class="section-divider"></div>
             </div>
-            <div style="justify-self: center;">
-                Made by Rafael Okabe using HTML, CSS, JavaScript, and Bootstrap.
 
+            <div class="contact-grid">
+                <!-- Left: Info -->
+                <div class="contact-info">
+                    <h3>Let's build something <span class="text-gradient">amazing</span></h3>
+                    <p>
+                        I'm always open to new opportunities, collaborations, or just a
+                        chat about game development. Reach out and let's make it happen.
+                    </p>
+
+                    <div class="contact-details">
+                        <div class="item">
+                            <i class="fas fa-envelope"></i>
+                            <span>alex@rivergames.dev</span>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Remote · Available Worldwide</span>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-clock"></i>
+                            <span>UTC-5 · Response within 24h</span>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+                    </div>
+                </div>
+
+                <!-- Right: Form -->
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="e.g. Jordan Lee" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="jordan@example.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="Game collaboration inquiry" />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Tell me about your project…" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
             </div>
-        </footer>
-        <hr>
+        </div>
+    </section>
 
-        <!-- #endregion -->
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <p>
+                &copy; 2026 <span class="footer-heart">♥</span> Alex Rivera &mdash;
+                Game Developer &amp; Programmer
+            </p>
+        </div>
+    </footer>
 
-    </div>
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="./script.js"></script>
 </body>
-
 </html>

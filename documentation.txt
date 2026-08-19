@@ -39,6 +39,7 @@ index.html
 │   ├── <footer>
 │   └── <script> (All JavaScript)
 └── (End)
+
 3. Dependencies & External Resources
 Resource	Purpose	Version/Link
 Google Fonts	Typography (Headlines & Body)	Orbitron (display), Inter (sans-serif)
@@ -56,12 +57,14 @@ The "Hire Me" link uses a special .nav-cta class for a gradient button effect.
 
 Includes a .hamburger button (visible on mobile) to toggle the side menu.
 
+
 4.2. Main Page / Hero (#home)
 Structured as a two-column grid (.hero-grid).
 
 Left Column: Headline (with animated gradient text), tagline, experience badges (Years, Games, Awards), and call-to-action (CTA) buttons.
 
 Right Column: Circular avatar wrapper (.hero-avatar) with a floating animation. Inside is a placeholder icon (fa-user-astronaut). Surrounding it are floating decorative icons (.floating-icons).
+
 
 4.3. Projects Section (#projects)
 A grid layout (.projects-grid) with grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) to handle responsiveness.
@@ -72,6 +75,7 @@ A visual thumb area (.project-thumb) – currently using a solid color backgroun
 
 A body with category, title, description, tech tags (.project-tags), and action links (Code/Demo).
 
+
 4.4. Contact Section (#contact)
 Two-column layout (.contact-grid).
 
@@ -79,8 +83,10 @@ Left Column: Email, location, availability, and social media links.
 
 Right Column: A functional HTML form with fields for Name, Email, Subject, and Message. The form uses required attributes for basic validation.
 
+
 4.5. Footer
 Simple centered text with a copyright notice and a heart icon.
+
 
 5. CSS Architecture
 5.1. Custom Properties (Root Variables)
@@ -99,10 +105,12 @@ css
 --transition: 0.4s cubic-bezier(...);
 Changing these variables globally alters the entire theme instantly.
 
+
 5.2. Layout Methods
 Grid: Used for the hero section, projects grid, and contact layout.
 
 Flexbox: Used for navigation, badges, button groups, and project tags.
+
 
 5.3. Key Animations
 @keyframes gradientShift: Moves the background position of the gradient text to create a flowing neon effect.
@@ -111,12 +119,14 @@ Flexbox: Used for navigation, badges, button groups, and project tags.
 
 @keyframes floatIcon: Similar to float but includes a slight rotation.
 
+
 5.4. Responsive Breakpoints
 1024px: Hero switches to single-column (text above avatar). Contact switches to single-column.
 
 768px: Mobile menu activates (hamburger replaces nav links). Font sizes scale down.
 
 480px: Buttons become full-width for better touch interaction.
+
 
 6. JavaScript Functionality
 The code is self-contained in a single <script> block at the bottom of the body.
@@ -128,10 +138,12 @@ Logic: Particles move randomly. When the distance between two particles is less 
 
 Resize Handling: The canvas resizes dynamically when the browser window changes.
 
+
 6.2. Navigation & UI Interactions
 Scroll Effect: Adds a .scrolled class to the navbar when the user scrolls past 40px, increasing the background opacity and shadow.
 
 Hamburger Menu: Toggles the .open class on the nav links and .active on the hamburger icon to animate the bars into an "X". It also closes the menu when a link is clicked.
+
 
 6.3. Contact Form
 Behavior: Prevents the default POST request.
@@ -140,8 +152,10 @@ Simulation: Shows a loading spinner (fa-spinner), simulates a 1.5s network delay
 
 Note: This is a front-end simulation. To actually send emails, you must integrate a backend API (e.g., Formspree, EmailJS, Netlify Forms).
 
+
 6.4. Smooth Scrolling
 Adds a fallback scrollIntoView({ behavior: 'smooth' }) for anchor links (#), ensuring smooth navigation across all modern browsers.
+
 
 7. Customization Guide
 7.1. Changing the Avatar
@@ -153,6 +167,7 @@ html
     <img src="your-photo.jpg" alt="Alex Rivera" />
 </div>
 Make sure to set width: 100%; height: 100%; object-fit: cover; (already applied in the CSS).
+
 
 7.2. Adding/Editing Projects
 Duplicate the .project-card div inside the .projects-grid. Update the following fields:

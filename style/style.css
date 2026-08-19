@@ -81,7 +81,7 @@
             opacity: 0.5;
         }
 
-        /* ===== NAVIGATION ===== */
+        /* #region===== NAVIGATION ===== */
         .navbar {
             position: fixed;
             top: 0;
@@ -199,8 +199,9 @@
         .hamburger.active span:nth-child(3) {
             transform: rotate(-45deg) translate(5px, -5px);
         }
+        /* #endregion */
 
-        /* ===== HERO / MAIN PAGE ===== */
+        /* #region===== HERO / MAIN PAGE ===== */
         .hero {
             position: relative;
             z-index: 1;
@@ -430,6 +431,7 @@
                 transform: translateY(-20px) rotate(10deg);
             }
         }
+        /* #endregion */
 
         /* ===== SECTION COMMON ===== */
         .section {
